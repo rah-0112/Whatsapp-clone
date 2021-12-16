@@ -63,8 +63,8 @@ const Chat = () => {
 
                 <div className='chat_headerInfo'>
                     <h3>{roomName}</h3>
-                    <p>Last seen at {" "}
-                        {new Date(messages[messages.length - 1]?.timestamp)}
+                    <p>Last seen{" "}
+                        {new Date(messages[messages.length - 1]?.timestamp?.toDate()).toUTCString()}
                     </p>
                 </div>
 
